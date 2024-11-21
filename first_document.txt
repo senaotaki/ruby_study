@@ -1,1 +1,3 @@
 Hello World!
+This is my first time using github and vscode.
+I want to practice fetching and pushing data.
