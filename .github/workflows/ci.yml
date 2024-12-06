@@ -18,6 +18,8 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.3.6
+    - name: Add x86_64-linux platform
+      run: bundle lock --add-platform x86_64-linux
     - name: Install dependencies
       run: bundle install
     - name: Run tests
