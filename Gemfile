@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'rake'
 gem 'minitest', '~> 5.14'
+gem 'rake'
 
 group :development do
-  gem 'bundler-audit'
   gem 'brakeman'
+  gem 'bundler-audit'
   gem 'rubocop'
 end

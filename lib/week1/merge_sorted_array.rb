@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # @param {Integer[]} nums1
 # @param {Integer} m
 # @param {Integer[]} nums2
