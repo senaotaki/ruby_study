@@ -23,7 +23,7 @@ jobs:
      # uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
       with:
         # ruby-version: 3.3.6
-        ruby-version: 3.2.2
+        ruby-version: 3.2.4
         bundler-cache: false
 
     - name: Publish to GPR
@@ -46,5 +46,3 @@ jobs:
         printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
         gem build *.gemspec
         gem push *.gem
-      env:
-        GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
