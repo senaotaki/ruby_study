@@ -32,8 +32,8 @@ jobs:
         touch $HOME/.gem/credentials
         chmod 0600 $HOME/.gem/credentials
         printf -- "---\n:github: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
-        gem build *.gemspec
-        gem push --KEY github --host https://rubygems.pkg.github.com/${OWNER} ruby_study-*.gem
+        gem build ruby_study.gemspec
+        gem push --KEY github --host https://rubygems.pkg.github.com/${OWNER} ruby_study*.gem
       env:
         GEM_HOST_API_KEY: ${{ secrets.GITHUB_TOKEN }}
         OWNER: ${{ github.repository_owner }}
@@ -44,7 +44,7 @@ jobs:
         touch $HOME/.gem/credentials
         chmod 0600 $HOME/.gem/credentials
         printf -- "---\n:rubygems_api_key: ${RUBYGEMS_API_KEY}\n" > $HOME/.gem/credentials
-        gem build *.gemspec
-        gem push *.gem
+        gem build ruby_study.gemspec
+        gem push ruby_study*.gem
       env:
         RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
