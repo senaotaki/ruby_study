@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
+
 gem 'rake'
 gem 'minitest', '~> 5.14'
+
 group :development do
-   gem 'bundler-audit'
- end
+  gem 'bundler-audit'
+  gem 'brakeman'
+  gem 'rubocop'
+end
