@@ -6,16 +6,17 @@ Select directory containing desired weekly content then write a solution to the 
 
 ### Steps
 
-1. From the working directory on your local computer clone this repository:
+1. From GitHub create a new fork 
+2. From the working directory on your local computer clone the fork (replce HTTPS with actual URL):
 ```Bash
-git clone https://github.com/senaotaki/ruby_study.git
+git remote add fork https://github.com/YOUR_USERNAME/REPO_NAME.git
 ```
-2. Navigate into the repository directory and create a feature branch:
+3. Navigate into the repository directory and create a feature branch:
 ```Bash
 git checkout -b <name-of-feature-branch>
 ```
-3. Create a new file and/or delete/modify contents of existing file being worked and save changes.
-4. Stage changes:
+4. Create a new file and/or delete/modify contents of existing file being worked and save changes.
+5. Stage changes:
 ```Bash
 git add <name-of-file>
 ```
@@ -27,16 +28,16 @@ git add . <name-of-file>
 ```Bash
 git add <name-of-file1> <name-of-file2> <name-of-file-nth>
 ```
-5. Commit changes:
+6. Commit changes:
 ```Bash
 git commit -m "<Insert comment describing changes being pushed>"
 ```
-6. Push changes to remote branch
+7. Push changes to remote branch
 ```Bash
 git push origin <name-of-feature-branch>
 ```
-7. In GitHub initiate Pull Request.
-8. Once code review is completed and approved merge feature branch into main branch. This could be completed:
+8. In GitHub initiate Pull Request.
+9. Once code review is completed and approved merge feature branch into main branch. This could be completed:
    - From GitHub
    - By running command:
 ```Bash
