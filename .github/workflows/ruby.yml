@@ -36,3 +36,20 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
       run: bundle exec rake
+
+      publish:
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+        - name: Set up Ruby
+          uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: 3.2.4
+        - name: Build gem
+          run: gem build ruby_study.gemspec
+        - name: Publish to RubyGems
+          env:
+            RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+          run: |
+            gem push ruby_study-*.gem
