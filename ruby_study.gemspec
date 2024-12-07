@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'ruby_study'
-  spec.version       = '0.1.6'
+  spec.version       = '0.1.7'
   spec.authors       = ['EL REY UNO']
   spec.email         = ['EddieZeboSlightWindow@gmail.com']
 
