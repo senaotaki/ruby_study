@@ -19,3 +19,27 @@ class TestMergeSortedArray < Minitest::Test
     assert_equal expected, nums1
   end
 end
+
+def test_merge_with_second_array_empty
+  nums1 = [1, 2, 3]
+  nums2 = []
+  merge(nums1, 3, nums2, 0)
+  expected = [1, 2, 3]
+  assert_equal expected, nums1
+end
+
+def test_merge_with_both_arrays_empty
+  nums1 = []
+  nums2 = []
+  merge(nums1, 0, nums2, 0)
+  expected = []
+  assert_equal expected, nums1
+end
+
+def test_merge_with_same_elements
+  nums1 = [1, 1, 1, 0, 0, 0]
+  nums2 = [1, 1, 1]
+  merge(nums1, 3, nums2, 3)
+  expected = [1, 1, 1, 1, 1, 1]
+  assert_equal expected, nums1
+end
