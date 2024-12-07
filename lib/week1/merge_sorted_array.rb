@@ -1,22 +1,26 @@
 # frozen_string_literal: true
-def merge(array1, length1, array2, length2)
-  i = length1 - 1
-  j = length2 - 1
-  k = length1 + length2 - 1
 
+# @param {Integer[]} nums1
+# @param {Integer} m
+# @param {Integer[]} nums2
+# @param {Integer} n
+# @return {Void} Do not return anything, modify nums1 in-place instead.
+def merge(nums1, m, nums2, n)
+  i = m - 1
+  j = n - 1
+  k = m + n - 1
   while i >= 0 && j >= 0
-    if array1[i] > array2[j]
-      array1[k] = array1[i]
+    if nums1[i] > nums2[j]
+      nums1[k] = nums1[i]
       i -= 1
     else
-      array1[k] = array2[j]
+      nums1[k] = nums2[j]
       j -= 1
     end
     k -= 1
   end
-
   while j >= 0
-    array1[k] = array2[j]
+    nums1[k] = nums2[j]
     j -= 1
     k -= 1
   end
