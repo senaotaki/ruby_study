@@ -46,6 +46,3 @@ DEPENDENCIES
   minitest (~> 5.14)
   rake
   rubocop
-
-BUNDLED WITH
-   2.5.23
